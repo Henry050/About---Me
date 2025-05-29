@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 75px 150px;
+}
+.container img{
+    border: 5px solid #f1c708;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 5px;
+}
+
+.flex-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 50%;
+    display: grid;
+    padding: 10px 0;
+    line-height: 25px;
+}
+.content h1{
+    color: #f1c708;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.content p{
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icons{
+    margin: 15px 0;
+}
+.icons a{
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 10px;
+}
+.icons i:hover{
+    color: #f1c708;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px ;
+    transition: 0.5s;
+}
+
+.bx{
+    border: 1px solid #f1c708; 
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #f1c708;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 200px;
+}
+button:hover{
+    background-color: #796300;
+    color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .flex-container{
+        display: grid;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .content{
+        width: 80%;
+    }
+    .icons{
+        margin: 15px 0;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .content {
+        width: 80%;
+    }
+    .icons {
+        margin: 15px 0;
+    }
+}
+
