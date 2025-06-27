@@ -108,11 +108,10 @@
             padding: 120px 50px 50px;
         }
 
-
-        /* Contact grid */
+/* Contact grid */
         .contact-grid {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
             gap: 60px;
             align-items: start;
         }
@@ -136,9 +135,9 @@
             margin-bottom: 40px;
         }
 
-        .contact-methods {           
-             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
             gap: 25px;
             margin-bottom: 40px;
         }
