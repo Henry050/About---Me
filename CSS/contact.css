@@ -335,6 +335,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        
 
         .submit-btn::before {
             content: '';
