@@ -112,3 +112,35 @@
             el.style.animationPlayState = 'paused';
             observer.observe(el);
         });
+
+
+          const contactForm = document.getElementById('contactForm');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const messageData = {
+      firstName,
+      lastName,
+      email,
+      phone,
+      subject,
+      message
+    };
+
+    // Call the global addMessage function
+    if (typeof addMessage === 'function') {
+      addMessage(messageData);
+      alert('Message sent successfully!');
+      contactForm.reset(); // Clear form after submission
+    } else {
+      console.error('addMessage function not found.');
+    }
+  });

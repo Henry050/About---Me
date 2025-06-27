@@ -1,4 +1,4 @@
- // Sample messages data (in a real application, this would come from a database)
+
         let messages = [
             {
                 id: 1,

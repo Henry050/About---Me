@@ -360,6 +360,8 @@
             transform: translateY(-1px);
         }
 
+        
+
         @keyframes slideInLeft {
             from {
                 opacity: 0;
