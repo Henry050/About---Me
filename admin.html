@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Henry</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">Henry - Admin Dashboard</div>
+            <div class="admin-info">
+                <span>Welcome, Henry</span>
+                <div class="admin-avatar">H</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Dashboard stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="stat-number" id="totalMessages">0</div>
+                <div class="stat-label">Total Messages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-envelope-open'></i>
+                </div>
+                <div class="stat-number" id="unreadMessages">0</div>
+                <div class="stat-label">Unread Messages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-time'></i>
+                </div>
+                <div class="stat-number" id="todayMessages">0</div>
+                <div class="stat-label">Today's Messages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-trending-up'></i>
+                </div>
+                <div class="stat-number" id="responseRate">95%</div>
+                <div class="stat-label">Response Rate</div>
+            </div>
+        </div>
+
+        <!-- Messages section -->
+        <div class="messages-section">
+            <div class="section-header">
+                <h2 class="section-title">Messages</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="unread">Unread</button>
+                    <button class="filter-btn" data-filter="read">Read</button>
+                    <input type="text" class="search-box" placeholder="Search messages..." id="searchBox">
+                </div>
+            </div>
+
+            <div class="messages-list" id="messagesList">
+                <!-- Messages will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Message Details</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="message-details" id="messageDetails">
+                    <!-- Message details will be populated here -->
+                </div>
+                <div class="message-content" id="messageContent">
+                    <!-- Message content will be populated here -->
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="markAsRead">Mark as Read</button>
+                <button class="btn btn-primary" id="replyBtn">Reply</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/admin.js"></script>
+    <script src="/JS/main.js"></script>
+</body>
+</html>
